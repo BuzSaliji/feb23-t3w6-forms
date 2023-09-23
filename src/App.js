@@ -8,6 +8,7 @@ import './App.css';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import PokemonFetchPage from './pages/PokemonFetchPage';
 import { Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
 
       <Routes>
+
         <Route path="/" element={<HomePage />} />
 
         {/* <Route path="/about" element={<AboutPage />}> */}
@@ -37,6 +39,9 @@ function App() {
           <Route index element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
         </Route>
+
+        <Route path="/pokemon" element={<PokemonFetchPage />} />
+        <Route path="/pokemon/:pokemonId" element={<PokemonFetchPage />} />
 
       </Routes>
 
